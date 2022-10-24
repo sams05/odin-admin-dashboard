@@ -23,6 +23,8 @@ li {
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .sidebar {
@@ -33,13 +35,35 @@ li {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
 }
 
 .main-content {
     background-color: rgb(226 232 240);
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+}
+
+.profile-pic-container {
+    background-color: yellow;
+}
+
+/* Header layout and styling */
+
+.header .icon-button {
+    /* Remove button appearance */
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.header-row-1 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+}
+
+.header-row-1 input[type="search"] {
+    max-width: 700px;
 }
 
 /* Sidebar layout and styling */
@@ -50,7 +74,7 @@ li {
     display: grid;
     grid-template-columns: 45px auto;
     grid-auto-rows: max-content;
-    gap: 10px;
+    gap: 20px 15px;
 }
 
 .nav-main > li,
@@ -60,24 +84,24 @@ li {
 }
 
 .sidebar a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     text-decoration: none;
 }
 
 .sidebar img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     justify-self: center;
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .logo a,
@@ -87,7 +111,21 @@ li {
 }
 
 /* Temporary styling while working out the page layout */
-img {
+.icon-button img {
     width: 20px;
     height: 20px;
+}
+
+.profile-pic-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic-container > img {
+    width: 20px;
+    height: auto;
 }
