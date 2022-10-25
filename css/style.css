@@ -42,6 +42,10 @@ a {
     gap: 15px;
     padding-left: 45px;
     padding-right: 45px;
+    /* Setting relative positioning so that box-shadow will show up over the
+     background of the main content section */
+    position: relative;
+    box-shadow: 0 4px 4px rgb(200, 200, 200);
 }
 
 .sidebar {
@@ -212,6 +216,11 @@ a {
     background-color: white;
     border-radius: 10px;
     padding: 25px 20px;
+    box-shadow: 4px 4px 4px rgb(200, 200, 200);
+}
+
+.card p {
+    color: gray;
 }
 
 .projects-cards-container {
@@ -223,9 +232,7 @@ a {
 .projects-cards-container p {
     height: 100px;
     overflow: hidden;
-    text-overflow: ellipsis;
     margin-bottom: 10px;
-    color: gray
 }
 
 .projects-cards-container .card {
@@ -256,4 +263,37 @@ Applying styling to the left border of the card directly will lead to curved bor
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+}
+
+.announcements p {
+    height: 50px;
+    overflow: hidden;
+    font-size: .8rem;
+}
+
+.announcements hr {
+    margin: 10px 0;
+    /* hr styling reference: https://css-tricks.com/simple-styles-for-horizontal-rules/ */
+    border: none;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.trending .card {
+    display: grid;
+    gap: 15px;
+}
+
+.trending-project {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    gap: 15px;
+    font-size: .8rem;
+}
+
+/* Text for username */
+.trending-project p:first-of-type {
+    color: black;
 }
